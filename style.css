@@ -1,0 +1,64 @@
+body{
+
+  margin: 0;
+  background-color: #eef3f9;
+  font-family: 'Playfair Display SC', serif;
+}
+
+/* --------Menu burger button-------- */
+.menuButton{
+  position: fixed;
+  display: block;
+  left: 50px;
+  top: 100px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: white;
+  /* box-shadow: 0 0 10px black; */
+
+  z-index: 5;
+}
+
+/* --------Menu button design and animation-------- */
+.menuButton span,
+.menuButton span::after,
+.menuButton span::before
+ {
+  position: absolute;
+  top: 50%; margin-top: -3px;
+  left: 50%; margin-left: -25px;
+  width: 50px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: black;
+}
+
+.menuButton span::after,
+.menuButton span::before {
+  display: block;
+  content: "";
+
+  transition: 0.5s;
+}
+
+.menuButton span::before{
+  transform: translateY(-14px);
+}
+
+.menuButton span::after{
+  transform: translateY(14px);
+}
+
+.activeMenuButton span::before{
+  transform: rotate(45deg) ;
+}
+
+.activeMenuButton span::after{
+  transform: rotate(-45deg) ;
+}
+.activeMenuButton span{
+  background-color: white;
+}
+
